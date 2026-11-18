@@ -1,0 +1,12 @@
+Business Databases — An Introduction
+
+Open index.html in a browser. Keep styles.css, app.js and the assets folder beside it.
+To host it on a website, upload all of this folder's contents together. No build step is needed.
+
+The reading is independent of a course schedule, slide deck or classroom case.
+All Cedar Books organizations, people, book titles and records are fictional examples.
+The sample database and worked queries use SQLite. Expected answers are shown in the reading.
+Use a fresh database copy if you change records while experimenting.
+
+The separate Business Database Guide.html deliverable is self-contained and includes its downloads.
+No webpage files have been published by this revision.

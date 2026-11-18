@@ -1,0 +1,17 @@
+Table,Column,Type,Required,Key / reference,Meaning and rules
+Customers,CustomerID,INTEGER,Generated,PK,Unique customer identifier; no business meaning.
+Customers,CustomerName,TEXT,Yes,—,Display name; different customers may share a name.
+Customers,City,TEXT,Yes,—,"Current customer city, using consistent spellings."
+Customers,Email,TEXT,No,—,Contact email; NULL means it was not supplied.
+Books,BookID,INTEGER,Generated,PK,Unique identifier for one sellable book edition.
+Books,Title,TEXT,Yes,—,Title of that edition; not assumed unique.
+Books,Category,TEXT,Yes,—,Reporting category; one category per book in this simplified model.
+Books,ListPrice,REAL,Yes,—,Current unit list price in dollars; numeric and at least zero.
+Orders,OrderID,INTEGER,Generated,PK,Unique order identifier.
+Orders,CustomerID,INTEGER,Yes,FK → Customers.CustomerID,Customer who placed the order.
+Orders,OrderDate,TEXT,Yes,—,"Date placed, represented as YYYY-MM-DD."
+Orders,Status,TEXT,Yes,—,"Completed, Pending or Cancelled; the state of the order in this example."
+OrderLines,OrderID,INTEGER,Yes,PK part; FK → Orders.OrderID,Order containing the line.
+OrderLines,BookID,INTEGER,Yes,PK part; FK → Books.BookID,Book edition on the line; one occurrence per order.
+OrderLines,Quantity,INTEGER,Yes,—,Number of copies on the line; a positive whole number.
+OrderLines,UnitPrice,REAL,Yes,—,"Actual price per copy on this line, in dollars; numeric and nonnegative."
